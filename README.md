@@ -14,6 +14,9 @@ Dashboard interativo desenvolvido em Streamlit para monitoramento do piloto de g
 ## 📁 Link do Github
 https://github.com/tiagotkg/CS3-Governanca.git
 
+## 🤖 Link do Streamlit
+https://cs-governanca.streamlit.app
+
 ## 🚀 Como Executar
 
 ### 1. Ativar o ambiente virtual
