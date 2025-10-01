@@ -185,17 +185,20 @@ def initialize_openai_cache():
         
         client = openai.OpenAI(api_key=OPENAI_API_KEY)
         
-        # Resumo padrão dos dados para gerar insights iniciais
+        # Resumo padrão dos dados para gerar insights iniciais (baseado nos dados reais)
         default_data_summary = """
-        Período: 2024-01-01 a 2024-12-31
-        Regiões: Norte, Nordeste, Centro-Oeste, Sudeste, Sul
-        Total de chamados: 15,000
-        Chamados falsificados: 1,800
-        Taxa de falsificação: 12.0%
-        NPS médio original: 7.5
-        NPS médio falsificado: 4.2
-        Taxa de devolução original: 2.0%
-        Taxa de devolução falsificado: 15.0%
+        Período: 2023-01-01 a 2023-12-01
+        Regiões: América Latina, América do Norte, Europa, Oriente Médio e África, Ásia-Pacífico
+        Total de chamados: 64,460
+        Chamados falsificados: 14,823
+        Taxa de falsificação: 22.8%
+        NPS médio original: 68.0
+        NPS médio falsificado: 27.2
+        Taxa de devolução original: 1.9%
+        Taxa de devolução falsificado: 10.9%
+        Volume total médio: 633 unidades
+        Volume falsificado médio: 171 unidades
+        Penetração de falsificados: 26.8%
         """
         
         # Gerar insights
@@ -233,8 +236,14 @@ def initialize_openai_cache():
         {default_data_summary}
         
         MÉTRICAS FINANCEIRAS:
-        - ROI: 150.0%
-        - Payback: 8.0 meses
+        - ROI: 400.0%
+        - Payback: 3.0 meses
+        
+        CONTEXTO ADICIONAL:
+        - Análise global com 5 regiões geográficas
+        - Dados de 2023 com 60 registros mensais
+        - Escala NPS de 0-100 (não 0-10)
+        - Alta penetração de falsificados (26.8%)
         
         Forneça uma análise detalhada em português incluindo:
         1. Recomendação clara (GO, NO-GO ou GO CONDICIONAL)
