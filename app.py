@@ -912,7 +912,7 @@ def main():
     with col1:
         csv_data = download_data(filtered_df, 'CSV')
         st.download_button(
-            label="📊 Download CSV",
+            label="📊 CSV",
             data=csv_data,
             file_name=f"dados_piloto_{datetime.now().strftime('%Y%m%d')}.csv",
             mime="text/csv"
@@ -936,7 +936,7 @@ def main():
         zip_buffer.seek(0)
         
         st.download_button(
-            label="📈 Download PNG (ZIP)",
+            label="📈 PNG (ZIP)",
             data=zip_buffer.getvalue(),
             file_name=f"graficos_piloto_{datetime.now().strftime('%Y%m%d')}.zip",
             mime="application/zip"
@@ -949,7 +949,7 @@ def main():
         
         pdf_data = generate_pdf_report(filtered_df, pdf_insights, go_no_go_for_pdf)
         st.download_button(
-            label="📄 Download PDF",
+            label="📄 PDF",
             data=pdf_data,
             file_name=f"relatorio_piloto_{datetime.now().strftime('%Y%m%d')}.pdf",
             mime="application/pdf"
