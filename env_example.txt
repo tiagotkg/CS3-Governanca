@@ -1,0 +1,14 @@
+# Arquivo de exemplo para variáveis de ambiente
+# Copie este arquivo para .env e configure suas variáveis
+
+# Chave da API OpenAI (obrigatória)
+OPENAI_API_KEY=sua_chave_da_api_openai_aqui
+
+# Configurações opcionais
+PORT=8501
+LOG_LEVEL=INFO
+CACHE_TTL=300
+
+# Configurações de segurança (opcional)
+MAX_FILE_SIZE=10485760
+RATE_LIMIT=100
