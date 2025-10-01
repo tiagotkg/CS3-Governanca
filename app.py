@@ -173,7 +173,7 @@ def load_sample_data():
     return pd.DataFrame(data)
 
 # Cache global para insights e recomendações
-@st.cache_data(ttl=CACHE_TTL)
+@st.cache_data(ttl=CACHE_TTL, show_spinner=False)
 def initialize_openai_cache():
     """Inicializa o cache global com insights e recomendações da OpenAI"""
     try:
@@ -610,12 +610,11 @@ def main():
     
     # Inicializar cache global da OpenAI uma única vez
     if 'openai_cache_initialized' not in st.session_state:
-        with st.spinner("🤖 Inicializando análise de IA..."):
+        with st.spinner("Carregando..."):
             cache_data = initialize_openai_cache()
             st.session_state.insights_generated = cache_data['insights']
             st.session_state.go_no_go_recommendation = cache_data['go_no_go']
             st.session_state.openai_cache_initialized = True
-            st.success("✅ Análise de IA carregada com sucesso!")
     
     # Mostrar informações do ambiente (apenas em desenvolvimento)
     if ENVIRONMENT == "local":
