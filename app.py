@@ -936,7 +936,7 @@ def main():
         zip_buffer.seek(0)
         
         st.download_button(
-            label="📈 PNG (ZIP)",
+            label="📈 PNG",
             data=zip_buffer.getvalue(),
             file_name=f"graficos_piloto_{datetime.now().strftime('%Y%m%d')}.zip",
             mime="application/zip"
